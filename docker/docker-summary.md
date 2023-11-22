@@ -106,3 +106,33 @@ services:
       - 1443:443
     restart: unless-stopped
 ```
+## Dashy
+Docker Compose File
+```yaml
+---
+version: "3.8"
+services:
+  dashy:
+    container_name: Dashy
+    image: lissy93/dashy:latest
+    # Edit these volumes based on your binds. I personally added a docker appdata folder to my home directory in Ubuntu
+    volumes:
+      - /home/$user/docker/appdata/dashy/:/app/public/
+      - /home/$user/docker/appdata/dashy/item-icons:/app/public/item-icons
+    ports:
+      - 4000:80
+    environment:
+      - NODE_ENV=production
+      - UID=1000
+      - GID=1000
+
+    restart: unless-stopped
+
+    # Configure healthchecks
+    healthcheck:
+      test: ['CMD', 'node', '/app/services/healthcheck']
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+```
