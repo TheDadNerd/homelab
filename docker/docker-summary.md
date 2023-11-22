@@ -13,6 +13,7 @@ services:
       - '80:80'
       - '81:81'
       - '443:443'
+    ## Edit these volumes based on your binds. I personally added a docker appdata folder to my home directory in Ubuntu
     volumes:
       - /home/$user/docker/appdata/nginx/data/:/data
       - /home/$user/docker/appdata/nginx/letsencrypt/:/etc/letsencrypt
@@ -42,6 +43,7 @@ services:
     restart: always
     networks:
       - gitea
+    ## Edit these volumes based on your binds. I personally added a docker appdata folder to my home directory in Ubuntu
     volumes:
       - /home/$user/docker/appdata/gitea:/data
       - /etc/timezone:/etc/timezone:ro
@@ -96,6 +98,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
+    ## Edit these volumes based on your binds. I personally added a docker appdata folder to my home directory in Ubuntu
     volumes:
       - /home/$user/docker/appdata/heimdall/:/config
     ports:
