@@ -3,19 +3,27 @@ Credit to [Craft Computing](https://www.youtube.com/@CraftComputing) for this po
 
 ## Legacy Systems
 
-```nano /etc/default/grub```
+```
+nano /etc/default/grub
+```
 
 Intel
 
-```GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"```
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
+```
 
 OR for AMD
 
-```GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on"```
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on"
+```
 
 Save file and close
 
-```update-grub```
+```
+update-grub
+```
 
 ## EFI Boot Systems
 
@@ -38,12 +46,16 @@ nano /etc/kernel/cmdline
 
 Save file and close
 
-```proxmox-boot-tool refresh```
+```
+proxmox-boot-tool refresh
+```
 
 
 ## Load VFIO modules at boot-
 
-```nano /etc/modules```
+```
+nano /etc/modules
+```
 
 ```
 vfio
@@ -67,6 +79,8 @@ echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
 
 ## Apply all changes
 
-```update-initramfs -u -k all```
+```
+update-initramfs -u -k all
+```
 
 Reboot
