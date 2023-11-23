@@ -8,3 +8,6 @@ Commands and Common Setup for Proxmox. Click here for all things Proxmox ->[Prox
 
 ## Unraid
 Commands and Common Setup for Unraid. Click here for all things Unraid ->[Unraid Summary](unraid/unraid-summary.md)
+
+## YouTube
+See notes from TheDadNerd's videos [here](youtube-video-notes/youtube.md/)
