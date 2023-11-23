@@ -7,19 +7,19 @@ Credit to [Craft Computing](https://www.youtube.com/@CraftComputing) for this po
 nano /etc/default/grub
 ```
 
-Intel
+<br>For Intel Systems
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
 ```
 
-OR for AMD
+<br>OR for AMD Systems
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on"
 ```
 
-Save file and close
+<br>Save file and close
 
 ```
 update-grub
@@ -36,7 +36,7 @@ nano /etc/kernel/cmdline
 ```
 
 
-OR for AMD
+<br>OR for AMD
 
 ```
 nano /etc/kernel/cmdline
@@ -44,7 +44,7 @@ nano /etc/kernel/cmdline
 %> amd_iommu=on
 ```
 
-Save file and close
+<br>Save file and close
 
 ```
 proxmox-boot-tool refresh
