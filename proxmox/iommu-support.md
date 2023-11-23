@@ -1,4 +1,4 @@
-# IOMMU Supoort
+# IOMMU Support
 Credit to [Craft Computing](https://www.youtube.com/@CraftComputing) for this portion of the documentation
 
 ## Legacy Systems
